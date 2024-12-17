@@ -1,0 +1,185 @@
+/* General resets for the body and HTML */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Main container for the entire page */
+.container {
+  display: flex;
+  flex-direction: row; /* Arrange avatar/buttons on the left and chat on the right */
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Left section for avatar and buttons, now taking up 70% of the width */
+.left-section {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+}
+
+/* Avatar container */
+.avatar-container {
+  flex: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  height: 70vh; /* Make the avatar section taller */
+}
+.exit-icon-wrapper {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+.chat-section {
+  padding: 20px;
+}
+
+.chat-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.exit-icon {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.exit-icon-wrapper:hover .exit-icon {
+  color: #333; /* Darken on hover */
+}
+.exit-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 8px 12px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.exit-button:hover {
+  background-color: #d9363e;
+}
+.agent-title {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Wrapper around the Canvas */
+.avatar-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Controls section for buttons, positioned under the avatar */
+.interactive-chat-section {
+  flex: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem; /* Increased font size */
+  line-height: 1.5; /* Improved readability */
+}
+
+/* Chat section taking up the remaining 30% */
+.chat-section {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Chat box where the chat messages are displayed */
+.chat-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 10px;
+  overflow-y: auto;
+  gap: 15px; /* Adjust spacing between messages */
+  padding: 15px; /* Increase padding for a cleaner look */
+}
+
+/* Styling individual chat messages */
+.chat-message {
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: 80%; /*Changed from 70*/
+  word-wrap: break-word;
+  font-size: 1.2rem; /* Increased font size for messages */
+  line-height: 1.5; /* Improve readability */
+
+}
+
+/* User message styling */
+.chat-message.User {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Avatar message styling */
+.chat-message.Avatar {
+  align-self: flex-start;
+  background-color: #eaeaea;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-inline: 5px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  font-size: 1.1rem; /* Increased font size for buttons */
+  padding: 15px 20px; /* Adjust padding to make buttons proportional */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #218838;
+}
